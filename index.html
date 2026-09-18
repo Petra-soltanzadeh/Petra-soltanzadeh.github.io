@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Petra Soltanzadeh Makouei | Academic & Professional Portfolio</title>
+    <title>Petra Soltanzadeh Makouei | Professional Portfolio</title>
     <!-- Google Font & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -41,29 +41,36 @@
         /* Header / Profile */
         header {
             text-align: center;
-            padding-bottom: 30px;
+            padding-bottom: 35px;
             border-bottom: 1px solid var(--border-color);
             margin-bottom: 30px;
         }
 
         .profile-title {
-            font-size: 2.2rem;
+            font-size: 2.3rem;
             font-weight: 700;
             color: #ffffff;
             margin-bottom: 8px;
+            letter-spacing: -0.5px;
         }
 
         .profile-subtitle {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             color: var(--accent-color);
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             font-weight: 500;
+        }
+
+        .profile-meta {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
         }
 
         .contact-links {
             display: flex;
             justify-content: center;
-            gap: 15px;
+            gap: 12px;
             flex-wrap: wrap;
             margin-top: 15px;
         }
@@ -72,19 +79,21 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            padding: 8px 16px;
+            padding: 9px 18px;
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
             color: var(--text-primary);
             text-decoration: none;
             border-radius: 6px;
             font-size: 0.9rem;
+            font-weight: 500;
             transition: all 0.2s ease;
         }
 
         .contact-btn:hover {
             border-color: var(--accent-color);
             color: var(--accent-color);
+            background-color: #1f242c;
             transform: translateY(-2px);
         }
 
@@ -93,28 +102,33 @@
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 12px;
-            padding: 24px;
+            padding: 26px;
             margin-bottom: 24px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: border-color 0.2s ease;
+        }
+
+        .section:hover {
+            border-color: #484f58;
         }
 
         .section-title {
-            font-size: 1.3rem;
+            font-size: 1.25rem;
             font-weight: 600;
             color: var(--text-primary);
             margin-bottom: 18px;
             display: flex;
             align-items: center;
             gap: 10px;
-            border-bottom: 1px solid rgba(240, 246, 252, 0.1);
-            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 12px;
         }
 
         .section-title i {
             color: var(--accent-color);
         }
 
-        /* Lists and Cards */
+        /* Item Cards */
         .item-card {
             margin-bottom: 16px;
         }
@@ -128,6 +142,7 @@
             justify-content: space-between;
             align-items: baseline;
             flex-wrap: wrap;
+            gap: 5px;
         }
 
         .item-role {
@@ -139,45 +154,38 @@
         .item-date {
             font-size: 0.85rem;
             color: var(--text-secondary);
+            font-weight: 500;
         }
 
         .item-org {
             color: var(--accent-color);
             font-size: 0.95rem;
             margin-bottom: 6px;
+            font-weight: 500;
         }
 
         .item-desc {
             color: var(--text-secondary);
             font-size: 0.95rem;
+            line-height: 1.6;
         }
 
-        /* Badges / Tags */
-        .tags-wrapper {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
+        /* Subheadings */
+        .sub-heading {
+            color: #ffffff;
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin: 16px 0 10px 0;
         }
 
-        .tag {
-            background-color: var(--tag-bg);
-            border: 1px solid var(--border-color);
-            color: #c9d1d9;
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
+        /* Lists */
         .cert-list {
             list-style: none;
         }
 
         .cert-list li {
             position: relative;
-            padding-left: 25px;
+            padding-left: 24px;
             margin-bottom: 10px;
             color: var(--text-secondary);
             font-size: 0.95rem;
@@ -194,11 +202,39 @@
             color: var(--text-primary);
         }
 
+        /* Badges / Tags */
+        .tags-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            background-color: var(--tag-bg);
+            border: 1px solid var(--border-color);
+            color: #c9d1d9;
+            padding: 7px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            transition: all 0.2s ease;
+        }
+
+        .tag:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+
         footer {
             text-align: center;
             color: var(--text-secondary);
             font-size: 0.85rem;
             margin-top: 40px;
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
         }
     </style>
 </head>
@@ -209,13 +245,16 @@
         <header>
             <h1 class="profile-title">Petra Soltanzadeh Makouei</h1>
             <p class="profile-subtitle">Undergraduate Mechanical Engineering Student (7th Semester)</p>
-            <p style="color: var(--text-secondary); max-width: 650px; margin: 0 auto 15px auto;">
-                Sharif University of Technology (International Campus - Kish Island) | GPA: 16.7 / 20
+            <p class="profile-meta">
+                Sharif University of Technology (International Campus - Kish Island) | Cumulative GPA: <strong>16.7 / 20</strong>
             </p>
             
             <div class="contact-links">
                 <a href="mailto:petrasoltanzadeh@gmail.com" class="contact-btn">
                     <i class="fa-regular fa-envelope"></i> petrasoltanzadeh@gmail.com
+                </a>
+                <a href="https://www.linkedin.com/in/petra-soltanzadeh-makouei-5183a1437" target="_blank" class="contact-btn">
+                    <i class="fa-brands fa-linkedin-in"></i> LinkedIn
                 </a>
                 <a href="https://github.com/Petra-soltanzadeh" target="_blank" class="contact-btn">
                     <i class="fa-brands fa-github"></i> GitHub Profile
@@ -227,7 +266,7 @@
         <div class="section">
             <h2 class="section-title"><i class="fa-solid fa-user"></i> About & Research Interests</h2>
             <p class="item-desc">
-                Enthusiastic and dedicated 7th-semester Mechanical Engineering student at Sharif University of Technology. Passionate about exploring the intersections of mechanical systems and intelligent computing. Primary areas of interest include <strong>Automatic Control Systems, Mechanical Vibrations, Robotics, and Applied AI/Data Science</strong> in modern engineering.
+                Enthusiastic and dedicated 7th-semester Mechanical Engineering student at Sharif University of Technology (Kish International Campus). Deeply interested in Automatic Control systems, Mechanical Vibrations, and applying computational tools to modern engineering challenges.
             </p>
         </div>
 
@@ -237,9 +276,9 @@
             <div class="item-card">
                 <div class="item-header">
                     <span class="item-role">B.Sc. in Mechanical Engineering</span>
-                    <span class="item-date">2021 – Present</span>
+                    <span class="item-date">October 2023 – Present</span>
                 </div>
-                <div class="item-org">Sharif University of Technology (International Campus - Kish)</div>
+                <div class="item-org">Sharif University of Technology (International Campus - Kish Island)</div>
                 <p class="item-desc">Current Status: 7th Semester | Cumulative GPA: <strong>16.7 / 20</strong></p>
             </div>
         </div>
@@ -254,35 +293,35 @@
                 </div>
                 <div class="item-org">Sharif University of Technology (Kish Campus)</div>
                 <p class="item-desc">
-                    Served as Teaching Assistant for 2 consecutive years, mentoring and grading students in core foundational courses:
+                    Served as Teaching Assistant for 2 consecutive years, mentoring and grading students in foundational courses:
                 </p>
-                <ul class="cert-list" style="margin-top: 8px;">
-                    <li><i class="fa-solid fa-check"></i> <strong>Pre-Physics</strong> (پیش فیزیک)</li>
-                    <li><i class="fa-solid fa-check"></i> <strong>Pre-Calculus / Pre-Mathematics</strong> (پیش ریاضی)</li>
+                <ul class="cert-list" style="margin-top: 10px;">
+                    <li><i class="fa-solid fa-check"></i> <strong>Pre-Physics</strong></li>
+                    <li><i class="fa-solid fa-check"></i> <strong>Pre-Mathematics</strong></li>
                 </ul>
             </div>
         </div>
 
-        <!-- Practical / Internship Experience -->
+        <!-- Practical Experience & Internship -->
         <div class="section">
             <h2 class="section-title"><i class="fa-solid fa-briefcase"></i> Practical Experience & Internship</h2>
             <div class="item-card">
                 <div class="item-header">
-                    <span class="item-role">Mechanical & HVAC Engineering Intern</span>
+                    <span class="item-role">Mechanical Engineering Intern</span>
                     <span class="item-date">8 Weeks</span>
                 </div>
                 <div class="item-org">Social Security Organization Hospital (Shazand)</div>
                 <p class="item-desc">
-                    Participated in major construction and renovation projects (Clinic Construction & Hospital Renovation), gaining hands-on field experience in mechanical installations, piping, HVAC, and building utility systems.
+                    Completed an 8-week internship focusing on facility construction and building renovation projects (Clinic Construction & Hospital Renovation), gaining practical field experience in mechanical installations and utility systems.
                 </p>
             </div>
         </div>
 
-        <!-- Certifications -->
+        <!-- Professional Certifications -->
         <div class="section">
             <h2 class="section-title"><i class="fa-solid fa-certificate"></i> Professional Certifications</h2>
             
-            <h4 style="color: var(--accent-color); font-size: 0.95rem; margin-bottom: 8px;">Mojtame Fanni Tehran (MFT):</h4>
+            <div class="sub-heading">Mojtame Fanni Tehran (MFT):</div>
             <ul class="cert-list" style="margin-bottom: 20px;">
                 <li><i class="fa-solid fa-award"></i> <strong>Introduction to Algorithms & Programming</strong></li>
                 <li><i class="fa-solid fa-award"></i> <strong>Programming with Python</strong></li>
@@ -290,7 +329,7 @@
                 <li><i class="fa-solid fa-award"></i> <strong>Machine Learning with Python</strong></li>
             </ul>
 
-            <h4 style="color: var(--accent-color); font-size: 0.95rem; margin-bottom: 8px;">Language & Teaching Credentials:</h4>
+            <div class="sub-heading">Language & Teaching Credentials:</div>
             <ul class="cert-list">
                 <li><i class="fa-solid fa-language"></i> <strong>MSRT English Proficiency Certificate</strong></li>
                 <li><i class="fa-solid fa-graduation-cap"></i> <strong>TTC (Teacher Training Course) Certificate</strong></li>
@@ -307,7 +346,7 @@
                 <span class="tag"><i class="fa-solid fa-code"></i> Algorithm Design</span>
                 <span class="tag"><i class="fa-solid fa-sliders"></i> Automatic Control</span>
                 <span class="tag"><i class="fa-solid fa-wave-square"></i> Mechanical Vibrations</span>
-                <span class="tag"><i class="fa-solid fa-fan"></i> HVAC & Building Utilities</span>
+                <span class="tag"><i class="fa-solid fa-building"></i> HVAC & Building Utilities</span>
             </div>
         </div>
 
